@@ -4,7 +4,8 @@ Naive Approach:
 1. If even -> mid = count/2+1
 2. If Odd -> mid = (count+1)/2
 3. Loop the Linked List from 1 to mid and do head.next() operation
-​
+
+
 2 pointer approach.
 You would be having 2 pointers:
 1. Slow pointer
