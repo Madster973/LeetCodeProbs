@@ -10,16 +10,19 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
-        if not head:
-            return False
-        slow = head
-        fast = head.next
-        while head and head.next:
+        # Initialise the slow to head and fast one step ahead
+        slow= fast = head
+        # Run the loop till fast reaches the end of the loop
+        while fast and fast.next:
+            # Increment the slow by 1 step and fast by 2 steps
             slow = slow.next
-            head = head.next.next
-            if slow is head:
+            fast = fast.next.next
+            # Check if slow is equal to fast or not
+            if slow == fast:
                 return True
         return False
+
+    
 
 
 
