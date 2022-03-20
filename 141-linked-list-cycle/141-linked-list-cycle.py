@@ -17,9 +17,10 @@ class Solution(object):
             # Increment the slow by 1 step and fast by 2 steps
             slow = slow.next
             fast = fast.next.next
-            # Check if slow is equal to fast or not
+            # Check if slow is equal to fast or not and return True
             if slow == fast:
                 return True
+        # If fast has reached the end point and slow and fast are not equal then return False
         return False
 
     
