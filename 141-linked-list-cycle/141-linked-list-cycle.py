@@ -16,7 +16,9 @@ class Solution(object):
             while slow is not fast:
                 slow = slow.next
                 fast = fast.next.next
-            return True
-        except:
+            return True  
+        except Exception:
             return False
+
+
         
