@@ -1,0 +1,1 @@
+You can use two pointer approach similar to the one used to find the middle of the linked list
