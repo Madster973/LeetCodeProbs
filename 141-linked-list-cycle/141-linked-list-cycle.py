@@ -10,12 +10,13 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
-        note_dict = {}
-        while head:
-            if head in note_dict:
-                return True
-            else:
-                note_dict[head] = 1
-                head = head.next
-        return False
+        try:
+            slow = head
+            fast = head.next
+            while slow is not fast:
+                slow = slow.next
+                fast = fast.next.next
+            return True
+        except:
+            return False
         
