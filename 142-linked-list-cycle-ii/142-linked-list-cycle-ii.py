@@ -10,6 +10,7 @@ class Solution(object):
         :type head: ListNode
         :rtype: ListNode
         """
+        # Code to detect the cycle in Linked List
         try:
             slow = head
             fast = head.next
@@ -18,8 +19,11 @@ class Solution(object):
                 fast = fast.next.next
         except Exception:
             return None
-        # slow = slow.next
+        # If the cycle ends at n we always converge at n-1 so we need to do slow/
+        # fast to next
         fast = fast.next
+        # Increment slow/fast or head till they meet. They meet only at the starting of the 
+        # Loop
         while head is not fast:
             head = head.next
             fast = fast.next
