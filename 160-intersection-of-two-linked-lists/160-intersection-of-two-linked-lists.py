@@ -21,5 +21,14 @@ class Solution(object):
         # In case if they don't meet they would be returning None because the 
         # intersect at None
         return l1            
-
+            
+        # a_dict = {}
+        # while headA:
+        #     a_dict[headA] = 1
+        #     headA = headA.next
+        # while headB:
+        #     if headB in a_dict:
+        #         return headB
+        #     headB = headB.next
+        # return None
         
