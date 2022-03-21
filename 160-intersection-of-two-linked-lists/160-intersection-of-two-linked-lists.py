@@ -10,13 +10,16 @@ class Solution(object):
         :type head1, head1: ListNode
         :rtype: ListNode
         """
-        a_dict = {}
-        while headA:
-            a_dict[headA] = 1
-            headA = headA.next
-        while headB:
-            if headB in a_dict:
-                return headB
-            headB = headB.next
-        return None
-            
+        # Assign two pointers to head
+        l1,l2 = headA,headB
+        # Run the loop till both l1 and l2 are not equal
+        while l1!=l2:
+            # iterate through the linked list and if it reaches end jump to the head of other 
+            # Linkedlist
+            l1 = l1.next if l1 else headB
+            l2 = l2.next if l2 else headA
+        # In case if they don't meet they would be returning None because the 
+        # intersect at None
+        return l1            
+
+        
