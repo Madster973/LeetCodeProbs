@@ -13,14 +13,17 @@ class Solution(object):
         :type head: Node
         :rtype: Node
         """
+        # Create a EMpty Hashmap
         oldToCopy = {None:None}
         curr = head
+        # Duplicate the Hashmap with the current Nodes
         while curr:
             copy = Node(curr.val)
             oldToCopy[curr] = copy
             curr = curr.next
         curr = head
         temp = oldToCopy[curr]
+        # Assign the next and Random Pointers in the copied list
         while curr:
             copy = oldToCopy[curr]
             copy.next = oldToCopy[curr.next]
